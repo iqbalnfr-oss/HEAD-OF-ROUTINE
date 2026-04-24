@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #1A1A1A;
+  --color-brand-accent: #c5a059;
+  --color-brand-bg: #F4F5F7;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-brand-bg text-brand-primary antialiased;
+  }
+}
+
+.architectural-card {
+  @apply bg-white border border-gray-200 shadow-sm rounded-lg overflow-hidden;
+  transition: all 0.2s ease;
+}
+
+.status-badge {
+  @apply px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded-full;
+}
+
+/* Custom Scrollbar for a more professional look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
